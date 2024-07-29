@@ -11,16 +11,15 @@ export async function POST(request: NextRequest) {
         const reqBody = await request.json();
         const { username, email, password } = reqBody;
 
-        console.log(reqBody);
-
         //check if user already exists
         const user = await User.findOne({ email });
 
         if (user) {
-            return NextResponse.json(
-                { error: "User already exists" },
-                { status: 400 }
-            );
+            return NextResponse.json({
+                error: "User already exists",
+                success: false,
+                status: 400,
+            });
         }
 
         //hash password
@@ -34,7 +33,6 @@ export async function POST(request: NextRequest) {
         });
 
         const savedUser = await newUser.save();
-        console.log(savedUser);
 
         //send verification email
 
@@ -44,6 +42,7 @@ export async function POST(request: NextRequest) {
             message: "User created successfully",
             success: true,
             savedUser,
+            status: 200,
         });
     } catch (error: any) {
         return NextResponse.json({ error: error.message }, { status: 500 });
