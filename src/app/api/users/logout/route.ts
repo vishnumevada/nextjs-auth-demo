@@ -7,18 +7,14 @@ export async function GET() {
             success: true,
         });
 
-        // Ensure the cookie is removed
         response.cookies.set("token", "", {
             httpOnly: true,
             expires: new Date(0),
-            path: "/", // Ensure the path is correctly set
-            domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN || undefined, // Set the domain if needed
+            path: "/",
+            domain:
+                "https://nextjs-auth-demo-theta.vercel.app/" ||
+                "http://localhost:3000",
         });
-
-        // response.cookies.set("token", "", {
-        //     httpOnly: true,
-        //     expires: new Date(0),
-        // });
 
         return response;
     } catch (error: any) {
