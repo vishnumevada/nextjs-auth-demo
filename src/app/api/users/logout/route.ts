@@ -7,14 +7,12 @@ export async function GET() {
             success: true,
         });
 
-        response.cookies.set("token", "", {
-            httpOnly: true,
-            expires: new Date(0),
-            path: "/",
-            domain:
-                "https://nextjs-auth-demo-theta.vercel.app/" ||
-                "http://localhost:3000",
-        });
+        // response.cookies.set("token", "", {
+        //     httpOnly: true,
+        //     expires: new Date(0),
+        // });
+
+        response.cookies.delete("token");
 
         return response;
     } catch (error: any) {
