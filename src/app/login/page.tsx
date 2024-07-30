@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import Notification from "@/components/Notification/Notification";
 
 const LoginPage = () => {
     const router = useRouter();
@@ -20,7 +19,7 @@ const LoginPage = () => {
             setLoading(true);
             const response = await axios.post("/api/users/login", user);
             toast.success("Login success");
-            router.push("/profile");
+            router.push("/home");
         } catch (error: any) {
             toast.error(error.message);
         } finally {
@@ -38,7 +37,6 @@ const LoginPage = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <Notification />
             <div className="container flex flex-col w-1/3 p-10 bg-slate-500 rounded-lg">
                 <h1 className="text-center mb-2">
                     {loading ? "Processing" : "Login"}
@@ -74,7 +72,7 @@ const LoginPage = () => {
                 <button
                     onClick={onLogin}
                     disabled={buttonDisabled}
-                    className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+                    className="p-2 my-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
                 >
                     Login
                 </button>

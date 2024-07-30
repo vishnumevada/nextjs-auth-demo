@@ -1,11 +1,10 @@
 "use client";
-import Link from "next/link";
-import ProfilePage from "./profile/page";
+import HomePage from "@/app/home/page";
 
 export default function Home() {
     return (
         <div>
-            <ProfilePage />
+            <HomePage />
         </div>
     );
 }

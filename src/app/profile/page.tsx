@@ -1,65 +1,64 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Link from "next/link";
-import { toast } from "react-hot-toast";
-import { useRouter } from "next/navigation";
-import Notification from "@/components/Notification/Notification";
-import nookies from "nookies";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import Image from "next/image";
 
 const ProfilePage = () => {
-    const router = useRouter();
-    const [data, setData] = useState("nothing");
+    const [user, setUser]: any = useState([]);
 
-    const logout = async () => {
-        try {
-            // Clear cookies on the client side
-            const cookies = nookies.get();
-            Object.keys(cookies).forEach((cookie) => {
-                nookies.destroy(null, cookie);
-            });
-
-            await axios.get("/api/users/logout");
-            toast.success("Logout successful");
-            router.push("/login");
-        } catch (error: any) {
-            toast.error(error.message);
-        }
-    };
+    useEffect(() => {
+        getUserDetails();
+    }, []);
 
     const getUserDetails = async () => {
         const res = await axios.get("/api/users/me");
-        setData(res.data.data._id);
+        setUser(res.data.data);
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <Notification />
-            <h1>Profile</h1>
-            <hr />
-            <p>Profile page</p>
-            <h2 className="p-1 rounded bg-green-500">
-                {data === "nothing" ? (
-                    "Nothing"
-                ) : (
-                    <Link href={`/profile/${data}`}>{data}</Link>
-                )}
-            </h2>
-            <hr />
-            <button
-                onClick={logout}
-                className="bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-                Logout
-            </button>
-
-            <button
-                onClick={getUserDetails}
-                className="bg-green-800 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-                GetUser Details
-            </button>
-        </div>
+        <>
+            <Header />
+            <div className="flex-grow">
+                <div className="flex items-center justify-center">
+                    <div className="bg-white p-8 rounded-lg shadow-lg w-2/4 mt-16">
+                        <div className="flex flex-col items-center">
+                            <Image
+                                src="http://localhost:3000/images/default-user.png"
+                                alt="Profile Picture"
+                                width={100}
+                                height={100}
+                                className="rounded-full"
+                            />
+                            <h1 className="text-2xl font-semibold mt-4">
+                                {user.username}
+                            </h1>
+                            <p className="text-gray-600">Software Developer</p>
+                        </div>
+                        <div className="mt-6">
+                            <h2 className="text-xl font-semibold">About Me</h2>
+                            <p className="text-gray-600 mt-2">
+                                I'm a software developer with a passion for
+                                building amazing applications. I love working
+                                with modern web technologies and always strive
+                                to improve my skills.
+                            </p>
+                        </div>
+                        <div className="mt-6">
+                            <h2 className="text-xl font-semibold">Contact</h2>
+                            <p className="text-gray-600 mt-2">
+                                Email: {user.email}
+                            </p>
+                            <p className="text-gray-600">
+                                Phone: (123) 456-7890
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </>
     );
 };
 
