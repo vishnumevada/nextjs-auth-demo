@@ -5,12 +5,20 @@ import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Notification from "@/components/Notification/Notification";
+import nookies from "nookies";
 
 const ProfilePage = () => {
     const router = useRouter();
     const [data, setData] = useState("nothing");
+
     const logout = async () => {
         try {
+            // Clear cookies on the client side
+            const cookies = nookies.get();
+            Object.keys(cookies).forEach((cookie) => {
+                nookies.destroy(null, cookie);
+            });
+
             await axios.get("/api/users/logout");
             toast.success("Logout successful");
             router.push("/login");
