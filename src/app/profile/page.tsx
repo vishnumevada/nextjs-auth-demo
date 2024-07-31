@@ -39,7 +39,7 @@ const ProfilePage = () => {
                         <div className="mt-6">
                             <h2 className="text-xl font-semibold">About Me</h2>
                             <p className="text-gray-600 mt-2">
-                                I'm a software developer with a passion for
+                                I&apos;m a software developer with a passion for
                                 building amazing applications. I love working
                                 with modern web technologies and always strive
                                 to improve my skills.
