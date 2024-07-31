@@ -119,7 +119,7 @@ const Header = () => {
                                     </span>
                                     <img
                                         alt=""
-                                        src="http://localhost:3000/images/default-user.png"
+                                        src="/images/default-user.png"
                                         className="h-8 w-8 rounded-full"
                                     />
                                 </MenuButton>

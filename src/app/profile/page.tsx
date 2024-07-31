@@ -25,7 +25,7 @@ const ProfilePage = () => {
                     <div className="bg-white p-8 rounded-lg shadow-lg w-2/4 mt-16">
                         <div className="flex flex-col items-center">
                             <Image
-                                src="http://localhost:3000/images/default-user.png"
+                                src="/images/default-user.png"
                                 alt="Profile Picture"
                                 width={100}
                                 height={100}
