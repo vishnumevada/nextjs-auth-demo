@@ -38,9 +38,7 @@ const LoginPage = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <div className="container flex flex-col w-1/3 p-10 bg-slate-500 rounded-lg">
-                <h1 className="text-center mb-2">
-                    {loading ? "Processing" : "Login"}
-                </h1>
+                <h1 className="text-center mb-2">Login</h1>
                 <hr />
 
                 <label htmlFor="email" className="my-2">
@@ -74,7 +72,14 @@ const LoginPage = () => {
                     disabled={buttonDisabled}
                     className="p-2 my-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
                 >
-                    Login
+                    {loading ? (
+                        <div className="flex justify-center items-center">
+                            <div className="w-5 h-5 border-4 border-t-4 border-white border-opacity-50 border-t-indigo-600 rounded-full animate-spin"></div>
+                            <span className="ml-2">Loading...</span>
+                        </div>
+                    ) : (
+                        "Login"
+                    )}
                 </button>
                 <Link href="/signup" className="text-right">
                     Don&apos;t have an account Signup here!
