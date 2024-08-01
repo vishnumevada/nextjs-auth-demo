@@ -1,17 +1,17 @@
-import { getDataFromToken } from "@/helpers/getDataFromToken";
 import { NextRequest, NextResponse } from "next/server";
-import User from "@/models/userModel";
+import Product from "@/models/productModel";
 import { connect } from "@/dbConfig/dbConfig";
 
 connect();
 
 export async function GET(request: NextRequest) {
     try {
-        const userId = await getDataFromToken(request);
-        const user = await User.findOne({ _id: userId }).select("-password");
+        const products = await Product.find();
         return NextResponse.json({
-            mesaaage: "User found",
-            data: user,
+            message: "Products fetched successfully",
+            success: true,
+            data: products,
+            status: 200,
         });
     } catch (error: any) {
         return NextResponse.json({ error: error.message }, { status: 400 });
