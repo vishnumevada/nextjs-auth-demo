@@ -4,6 +4,7 @@ import Link from "next/link";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import SkeletonProductList from "@/components/SkeletonUI/SkeletonProductList";
+import Image from "next/image";
 
 const Products = () => {
     const [products, setProducts] = useState<any>([]);
@@ -50,9 +51,11 @@ const Products = () => {
                                         className="group relative"
                                     >
                                         <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                            <img
-                                                alt={product.imageAlt}
+                                            <Image
                                                 src={product.imageSrc}
+                                                alt={product.imageAlt}
+                                                width={100}
+                                                height={100}
                                                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                                             />
                                         </div>

@@ -16,6 +16,7 @@ import axios from "axios";
 import nookies from "nookies";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
@@ -69,11 +70,18 @@ const Header = () => {
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center">
-                            <img
+                            <Image
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                alt="Your Company"
+                                width={500}
+                                height={300}
+                                className="h-8 w-auto"
+                            />
+                            {/* <img
                                 alt="Your Company"
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                                 className="h-8 w-auto"
-                            />
+                            /> */}
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
@@ -117,11 +125,18 @@ const Header = () => {
                                     <span className="sr-only">
                                         Open user menu
                                     </span>
-                                    <img
+                                    <Image
+                                        src="/images/default-user.png"
+                                        alt="Profile Picture"
+                                        width={500}
+                                        height={300}
+                                        className="h-8 w-8 rounded-full"
+                                    />
+                                    {/* <img
                                         alt=""
                                         src="/images/default-user.png"
                                         className="h-8 w-8 rounded-full"
-                                    />
+                                    /> */}
                                 </MenuButton>
                             </div>
                             <MenuItems

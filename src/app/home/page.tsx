@@ -2,8 +2,8 @@
 import React from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import Products from "@/components/Products/Products";
 import Link from "next/link";
+import Image from "next/image";
 
 const HomePage = () => {
     return (
@@ -35,55 +35,69 @@ const HomePage = () => {
                                             <div className="flex items-center space-x-6 lg:space-x-8">
                                                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
                                                 </div>
                                                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
                                                 </div>
                                                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
                                                     <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                        <img
+                                                        <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                                                            width={100}
+                                                            height={100}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>

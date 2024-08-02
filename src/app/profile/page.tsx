@@ -13,9 +13,7 @@ const ProfilePage = () => {
 
     useEffect(() => {
         setLoading(true);
-        setTimeout(() => {
-            getUserDetails();
-        }, 3000);
+        getUserDetails();
     }, []);
 
     const getUserDetails = async () => {
