@@ -40,7 +40,7 @@ const LoginPage = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2 px-4">
-            <div className="container flex flex-col w-full sm:w-2/3 md:w-1/2 lg:w-1/3 p-6 sm:p-10 bg-slate-500 rounded-lg">
+            <div className="container flex flex-col w-full sm:w-2/3 md:w-1/2 lg:w-1/3 p-6 sm:p-10 bg-gray-500 rounded-lg">
                 <h1 className="text-center mb-2">Login Here</h1>
                 <hr />
                 <Formik
@@ -54,7 +54,7 @@ const LoginPage = () => {
                                 Email
                             </label>
                             <Field
-                                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                                className="p-2 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-gray-600 text-black"
                                 id="email"
                                 name="email"
                                 type="text"
@@ -63,7 +63,7 @@ const LoginPage = () => {
                             <ErrorMessage
                                 name="email"
                                 component="div"
-                                className="text-red-500"
+                                className="text-red-600"
                             />
 
                             <label htmlFor="password" className="my-2">
@@ -79,13 +79,13 @@ const LoginPage = () => {
                             <ErrorMessage
                                 name="password"
                                 component="div"
-                                className="text-red-500"
+                                className="text-red-600"
                             />
 
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="p-2 my-2 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-gray-600"
+                                className="p-2 my-4 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-gray-600"
                             >
                                 {loading ? (
                                     <div className="flex justify-center items-center">

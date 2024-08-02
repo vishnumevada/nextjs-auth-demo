@@ -110,8 +110,8 @@ const ProductDetail = () => {
                                     <Image
                                         src={productDetail.imageSrc}
                                         alt={productDetail.imageAlt}
-                                        // width={100}
-                                        // height={100}
+                                        width={500}
+                                        height={500}
                                         className="h-full w-full object-cover object-center"
                                     />
                                 </div>

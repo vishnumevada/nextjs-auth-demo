@@ -38,8 +38,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
@@ -47,8 +47,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
@@ -58,8 +58,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
@@ -67,8 +67,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
@@ -76,8 +76,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
@@ -87,8 +87,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
@@ -96,8 +96,8 @@ const HomePage = () => {
                                                         <Image
                                                             alt=""
                                                             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
-                                                            width={100}
-                                                            height={100}
+                                                            width={500}
+                                                            height={500}
                                                             className="h-full w-full object-cover object-center"
                                                         />
                                                     </div>
