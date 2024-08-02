@@ -13,7 +13,9 @@ const ProfilePage = () => {
 
     useEffect(() => {
         setLoading(true);
-        getUserDetails();
+        setTimeout(() => {
+            getUserDetails();
+        }, 3000);
     }, []);
 
     const getUserDetails = async () => {
@@ -35,8 +37,8 @@ const ProfilePage = () => {
                 <SkeletonProfile />
             ) : (
                 <div className="flex-grow">
-                    <div className="flex items-center justify-center">
-                        <div className="bg-white p-8 rounded-lg shadow-lg w-2/4 mt-16">
+                    <div className="flex items-center justify-center py-2 px-4">
+                        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 mt-8 sm:mt-12 md:mt-16">
                             <div className="flex flex-col items-center">
                                 <Image
                                     src="/images/default-user.png"
@@ -45,15 +47,15 @@ const ProfilePage = () => {
                                     height={100}
                                     className="rounded-full"
                                 />
-                                <h1 className="text-2xl font-semibold mt-4">
+                                <h1 className="text-xl sm:text-2xl font-semibold mt-4">
                                     {user.username}
                                 </h1>
                                 <p className="text-gray-600">
                                     Software Developer
                                 </p>
                             </div>
-                            <div className="mt-6">
-                                <h2 className="text-xl font-semibold">
+                            <div className="mt-4 sm:mt-6">
+                                <h2 className="text-lg sm:text-xl font-semibold">
                                     About Me
                                 </h2>
                                 <p className="text-gray-600 mt-2">
@@ -63,8 +65,8 @@ const ProfilePage = () => {
                                     always strive to improve my skills.
                                 </p>
                             </div>
-                            <div className="mt-6">
-                                <h2 className="text-xl font-semibold">
+                            <div className="mt-4 sm:mt-6">
+                                <h2 className="text-lg sm:text-xl font-semibold">
                                     Contact
                                 </h2>
                                 <p className="text-gray-600 mt-2">

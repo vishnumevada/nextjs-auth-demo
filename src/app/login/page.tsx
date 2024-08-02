@@ -36,11 +36,10 @@ const LoginPage = () => {
     }, [user]);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            <div className="container flex flex-col w-1/3 p-10 bg-slate-500 rounded-lg">
+        <div className="flex flex-col items-center justify-center min-h-screen py-2 px-4">
+            <div className="container flex flex-col w-full sm:w-2/3 md:w-1/2 lg:w-1/3 p-6 sm:p-10 bg-slate-500 rounded-lg">
                 <h1 className="text-center mb-2">Login</h1>
                 <hr />
-
                 <label htmlFor="email" className="my-2">
                     Email
                 </label>
@@ -81,8 +80,8 @@ const LoginPage = () => {
                         "Login"
                     )}
                 </button>
-                <Link href="/signup" className="text-right">
-                    Don&apos;t have an account Signup here!
+                <Link href="/signup" className="text-center">
+                    Don&apos;t have an account? Sign up here!
                 </Link>
             </div>
         </div>
